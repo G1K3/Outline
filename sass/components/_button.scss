@@ -1,0 +1,65 @@
+.btn {
+    &, // only a links have link and visited pseudo tags so have to add this line for the <button> element
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 3.5rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        font-size: $default-font-size;
+        //Change for the <button> element
+        border: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba($color-black, 0.2);
+    }
+
+    &:active,
+    &:focus { // add focus line for <button> element
+        outline: none; // outline none for <button> element
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba($color-black, 0.2);
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;  
+
+    }
+
+    &--blue {
+        background-color: $color-one;
+        color: $color-white;
+
+    }
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        text-decoration: none;
+        font-size: $default-font-size;
+        display: inline-block;
+        border-bottom: 1px solid $color-one;
+        padding: .5rem;
+        color: $color-one;
+        transition: all .2s;
+    }
+    
+    &:hover {
+        background-color: $color-one;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+}
